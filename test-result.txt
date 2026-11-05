@@ -1,0 +1,22 @@
+
+> noctane-desktop@0.1.0 test
+> node --test tests/spotify-search.test.mjs tests/unified-music.test.mjs
+
+✔ filters null Spotify playlist results without discarding valid search results (1.6701ms)
+✔ turns missing or malformed search collections into empty result pages (0.2422ms)
+✔ normalizes malformed nested fields before search results render (0.4384ms)
+✔ mixed Spotify and YouTube history is deduplicated and sorted by playback time (1.7068ms)
+✔ local playback history is marked as recorded by Noctane (0.3146ms)
+✔ playback routes by original provider without substituting a version (0.4536ms)
+✔ missing artwork stays absent so the UI can use its neutral fallback (0.3393ms)
+✔ Home has no populated sections until actual data is available (0.2629ms)
+✔ unified results interleave providers and discard duplicate provider IDs (0.365ms)
+✔ navigating sections preserves current playback, queue, and position (0.1848ms)
+ℹ tests 10
+ℹ suites 0
+ℹ pass 10
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 544.4677

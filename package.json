@@ -1,0 +1,38 @@
+{
+  "name": "noctane-desktop",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "vite --host 127.0.0.1 --port 1420",
+    "build": "tsc -b && vite build",
+    "build:windows": "tauri build --bundles nsis && node scripts/copy-installer.mjs",
+    "preview": "vite preview --host 127.0.0.1",
+    "tauri": "tauri",
+    "test:spotify-search": "node --test tests/spotify-search.test.mjs",
+    "test:unified": "node --test tests/unified-music.test.mjs",
+    "test": "node --test tests/spotify-search.test.mjs tests/unified-music.test.mjs tests/autoplay.test.mjs",
+    "typecheck": "tsc -b --pretty"
+  },
+  "dependencies": {
+    "@tauri-apps/api": "^2.8.0",
+    "@tauri-apps/plugin-dialog": "^2.8.4",
+    "@tauri-apps/plugin-opener": "^2.5.0",
+    "lucide-react": "^0.468.0",
+    "motion": "^12.0.0",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "zustand": "^5.0.2"
+  },
+  "devDependencies": {
+    "@tailwindcss/vite": "^4.0.0",
+    "@tauri-apps/cli": "^2.2.0",
+    "@types/node": "^22.0.0",
+    "@types/react": "^18.3.18",
+    "@types/react-dom": "^18.3.5",
+    "@vitejs/plugin-react": "^4.3.4",
+    "tailwindcss": "^4.0.0",
+    "typescript": "~5.7.2",
+    "vite": "^6.0.7"
+  }
+}
